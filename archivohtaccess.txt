@@ -1,0 +1,17 @@
+Header set Access-Control-Allow-Origin "*"
+
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /cotizador/(.*)$
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  FallbackResource /cotizador/index.html
+</IfModule>
+
+
+Ojo se comenta todos los header de la api porque ya se esta definiendo los cors aqui como htaccess

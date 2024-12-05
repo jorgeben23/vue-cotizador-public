@@ -1,0 +1,107 @@
+:root {
+  --green-primary-color: #00803d;
+  --orange-primary-color: #ea9818;
+  --green-secondary-color: #00803d10;
+  --gray-primary-color: #959595;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+  border-radius: 50% !important;
+  width: 25px !important;
+  height: 25px !important;
+  background-color: var(--orange-primary-color) !important;
+}
+
+:is(.swiper-button-prev, .swiper-button-next)::after {
+  font-size: 14px !important;
+}
+
+.swiper-button-prev {
+  left: 5px !important;
+}
+
+.swiper-button-next {
+  right: 5px !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 520px !important;
+  }
+}
+
+.swiper-wrapper,
+.swiper-slide {
+  height: auto !important;
+}
+
+/* START-- Animación para acción delete */
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter,
+.list-leave,
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+/* END-- */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.swal-title {
+  font-size: 28px !important;
+}
+
+.swal-text {
+  font-size: 15px !important;
+}
+
+.swal-button--confirm {
+  background-color: var(--green-primary-color) !important;
+}
+
+@media screen and (max-width: 480px) {
+  .swal-title {
+    font-size: 20px !important;
+  }
+}
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Breuer";
+  src: url("/fonts/Breuer/BreuerTextBold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Breuer";
+  src: url("/fonts/Breuer/BreuerTextMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Breuer";
+  src: url("/fonts/Breuer/BreuerTextRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
